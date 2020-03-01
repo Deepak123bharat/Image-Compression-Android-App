@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.newraah.mysecondapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+
+    <dist:module dist:instant="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/unnamed"
+        android:versionCode= "2"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/unnamed"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4190280832454489~8527133531"/>
+
+        <activity android:name="com.newraah.mysecondapp.Main3Activity" />
+        <activity android:name="com.newraah.mysecondapp.Main2Activity" />
+        <activity
+            android:name="com.newraah.mysecondapp.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
